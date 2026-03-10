@@ -222,7 +222,7 @@ Make them feel supported, seen, and capable of growing into their best self.`;
           await new Promise(resolve => setTimeout(resolve, delay));
           return fetchWithRetry(userQuery, retries - 1, delay * 2);
         }
-        throw new Error('Failed to reach Chelsea. Please try again later.');
+        throw new Error('Chelsea AI is having trouble responding right now. Please try again in a moment.');
       }
 
       const data = await response.json();
@@ -284,7 +284,7 @@ Make them feel supported, seen, and capable of growing into their best self.`;
         <div className="relative z-10 max-w-xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm font-medium mb-6">
             <Crown size={18} className="text-yellow-300" />
-            <span>Inspired by Chelsea Fernandez, Miss Cosmo 2025 Runner-Up</span>
+            <span>Inspired by Miss Cosmo 2025 Runner-Up Chelsea Fernandez</span>
           </div>
           
          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">

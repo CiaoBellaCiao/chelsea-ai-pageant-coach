@@ -3,7 +3,7 @@ import { Send, User, Sparkles, Crown, MessageSquare, Info } from 'lucide-react';
 
 // Configuration constants
 const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent";
-const apiKey = ""; // Provided at runtime
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Provided at runtime
 const App = () => {
   const [messages, setMessages] = useState([
     { role: 'bot', text: "Mabuhay! I am Chelsea, your AI Pageant Coach. Whether you're preparing for Q&A, refining your advocacy, building stage presence, or getting ready for a mock interview, I'm here to help you shine. How would you like to begin today?" }

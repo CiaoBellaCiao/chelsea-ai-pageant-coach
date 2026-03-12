@@ -432,28 +432,28 @@ const buildConversationHistory = (messageList) => {
        <div className="p-6 bg-white border-t">
   <div className="flex flex-wrap gap-3 mb-4">
   <button
-    onClick={() => sendPresetMessage("Give me a pageant Q&A question.")}
+    onClick={() => sendPresetMessage("Give me an easy Q&A question and coach my answer step by step.")}
     className="px-4 py-2 bg-purple-100/80 hover:bg-purple-200 text-slate-700 rounded-full text-sm font-medium transition-all"
   >
     Practice Q&A
   </button>
 
   <button
-    onClick={() => sendPresetMessage("Help me build my advocacy message.")}
+    onClick={() => sendPresetMessage("Help me structure my advocacy answer clearly in 3 parts.")}
     className="px-4 py-2 bg-purple-100/80 hover:bg-purple-200 text-slate-700 rounded-full text-sm font-medium transition-all"
   >
     Build my advocacy
   </button>
 
   <button
-    onClick={() => sendPresetMessage("Give me stage presence tips for a pageant contestant.")}
+    onClick={() => sendPresetMessage("Give me 3 at-home stage presence drills I can practise today.")}
     className="px-4 py-2 bg-purple-100/80 hover:bg-purple-200 text-slate-700 rounded-full text-sm font-medium transition-all"
   >
     Stage presence tips
   </button>
 
   <button
-    onClick={() => sendPresetMessage("Start a mock pageant interview and ask me one question at a time.")}
+    onClick={() => sendPresetMessage("Start a mock interview with 3 questions, one at a time, and give feedback.")}
     className="px-4 py-2 bg-purple-100/80 hover:bg-purple-200 text-slate-700 rounded-full text-sm font-medium transition-all"
   >
     Mock interview

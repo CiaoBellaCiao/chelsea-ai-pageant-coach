@@ -258,6 +258,7 @@ const buildConversationHistory = (messageList) => {
     setIsLoading(false);
   }
 };
+
   const handleSend = async (e) => {
   e.preventDefault();
   if (!input.trim() || isLoading) return;
@@ -284,70 +285,88 @@ const buildConversationHistory = (messageList) => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans">
       {/* Left Column: Hero Area */}
-      <section className="w-full md:w-1/2 bg-gradient-to-br from-purple-700 via-purple-600 to-sky-500 text-white p-8 md:p-16 flex flex-col justify-center relative overflow-hidden">
+      <section className="w-full md:w-5/12 bg-gradient-to-br from-purple-700 via-purple-600 to-sky-500 text-white p-8 md:p-16 flex flex-col justify-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-sky-400/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
-        <div className="relative z-10 max-w-xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm font-medium mb-6">
-            <Crown size={18} className="text-yellow-300" />
-            <span>Inspired by Chelsea Fernandez</span>
-          </div>
-          
-   <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] mb-6 tracking-tight">
-  <span className="block text-white">Chelsea AI</span>
-  <span className="block bg-gradient-to-r from-sky-200 to-white bg-clip-text text-transparent">
-    Pageant Coach
-  </span>
-</h1>
-          
-          <p className="text-lg md:text-xl text-purple-50 opacity-90 mb-6 leading-relaxed max-w-xl">
-  Train with an AI pageant coach designed to help you sharpen your Q&A, strengthen your advocacy, and grow your stage presence.
-</p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-xl">
-  <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
-    <p className="text-white font-semibold text-sm">Q&A Coaching</p>
-    <p className="text-purple-100 text-sm mt-1">Practise pageant answers with clear, structured feedback.</p>
+       <div className="relative z-10 max-w-5xl">
+  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm font-medium mb-6">
+    <Crown size={18} className="text-yellow-300" />
+    <span>Inspired by Chelsea Fernandez</span>
   </div>
 
-  <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
-    <p className="text-white font-semibold text-sm">Advocacy Support</p>
-    <p className="text-purple-100 text-sm mt-1">Refine your platform and turn your story into a stronger message.</p>
-  </div>
+  <div className="flex flex-col lg:flex-row lg:items-center lg:gap-10">
+    {/* Text block */}
+    <div className="lg:flex-1">
+      <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] mb-4 tracking-tight">
+        <span className="block text-white">Chelsea AI</span>
+        <span className="block bg-gradient-to-r from-sky-200 to-white bg-clip-text text-transparent">
+          Pageant Coach
+        </span>
+      </h1>
 
-  <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
-    <p className="text-white font-semibold text-sm">Stage Presence Tips</p>
-    <p className="text-purple-100 text-sm mt-1">Get text-based coaching on poise, projection, and confidence.</p>
-  </div>
+      <p className="text-lg md:text-xl text-purple-50 opacity-90 mb-6 leading-relaxed max-w-xl">
+        Train with an AI pageant coach designed to help you sharpen your Q&A,
+        strengthen your advocacy, and grow your stage presence.
+      </p>
+    </div>
 
-  <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
-    <p className="text-white font-semibold text-sm">Mock Interviews</p>
-    <p className="text-purple-100 text-sm mt-1">Train one question at a time like a real pageant interview.</p>
-  </div>
-</div>
-
-          <div className="relative w-full aspect-[4/5] max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20">
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-900 via-transparent to-transparent z-10"></div>
-            <div className="absolute inset-0">
-  <img
-    src="/ChelseaFernandez.jpg"
-    alt="Chelsea Fernandez"
-    className="w-full h-full object-cover"
-  />
-</div>
-                    
-          
-            <div className="absolute bottom-6 left-6 z-20">
-                <p className="text-white font-semibold text-lg">Miss Cosmo 2025 Runner-Up</p>
-                <p className="text-sky-200 text-sm">Empowered by Chelsea AI</p>
-            </div>
-          </div>
+    {/* Photo block */}
+    <div className="mt-6 lg:mt-0 lg:flex-1">
+      <div className="relative w-full max-w-xs mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5]">
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-900 via-transparent to-transparent z-10"></div>
+        <img
+          src="/ChelseaFernandez.jpg"
+          alt="Chelsea Fernandez"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute bottom-4 left-4 z-20">
+          <p className="text-white font-semibold text-sm md:text-base">
+            Miss Cosmo 2025 Runner-Up
+          </p>
+          <p className="text-sky-200 text-xs md:text-sm">
+            Empowered by Chelsea AI
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+
+  {/* Feature cards under hero */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 max-w-2xl">
+    <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
+      <p className="text-white font-semibold text-sm">Q&A Coaching</p>
+      <p className="text-purple-100 text-sm mt-1">
+        Practise pageant answers with clear, structured feedback.
+      </p>
+    </div>
+
+    <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
+      <p className="text-white font-semibold text-sm">Advocacy Support</p>
+      <p className="text-purple-100 text-sm mt-1">
+        Refine your platform and turn your story into a stronger message.
+      </p>
+    </div>
+
+    <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
+      <p className="text-white font-semibold text-sm">Stage Presence Tips</p>
+      <p className="text-purple-100 text-sm mt-1">
+        Get text-based coaching on poise, projection, and confidence.
+      </p>
+    </div>
+
+    <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-4 shadow-lg shadow-black/10">
+      <p className="text-white font-semibold text-sm">Mock Interviews</p>
+      <p className="text-purple-100 text-sm mt-1">
+        Train one question at a time like a real pageant interview.
+      </p>
+    </div>
+  </div> 
+   </div>      
+               </section>
 
       {/* Right Column: Chat Interface */}
-      <section className="relative w-full md:w-1/2 flex flex-col bg-white h-screen shadow-2xl">
+      <section className="relative w-full md:w-7/12 flex flex-col bg-white h-screen shadow-2xl">
         <header className="p-6 border-b flex items-center justify-between bg-white sticky top-0 z-20">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 to-sky-400 flex items-center justify-center text-white shadow-md">

@@ -298,14 +298,14 @@ const buildConversationHistory = (messageList) => {
   <div className="flex flex-col lg:flex-row lg:items-center lg:gap-10">
     {/* Text block */}
     <div className="lg:flex-1">
-      <h1 className="text-4xl md:text-6xl font-bold leading-[0.95] mb-4 tracking-tight">
+      <h1 className="text-4xl md:text-6xl font-bold leading-[0.95] mb-2 tracking-tight">
   <span className="block text-white">Chelsea AI</span>
   <span className="block bg-gradient-to-r from-sky-200 to-white bg-clip-text text-transparent">
     Pageant Coach
   </span>
 </h1>
 
-      <p className="text-lg md:text-xl text-purple-50 opacity-90 mb-6 leading-relaxed max-w-xl">
+      <p className="text-lg md:text-xl text-purple-50 opacity-90 mb-3 leading-relaxed max-w-xl">
         Train with an AI pageant coach designed to help you sharpen your Q&A,
         strengthen your advocacy, and grow your stage presence.
       </p>

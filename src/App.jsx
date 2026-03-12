@@ -298,12 +298,12 @@ const buildConversationHistory = (messageList) => {
   <div className="flex flex-col lg:flex-row lg:items-center lg:gap-10">
     {/* Text block */}
     <div className="lg:flex-1">
-      <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] mb-4 tracking-tight">
-        <span className="block text-white">Chelsea AI</span>
-        <span className="block bg-gradient-to-r from-sky-200 to-white bg-clip-text text-transparent">
-          Pageant Coach
-        </span>
-      </h1>
+      <h1 className="text-4xl md:text-6xl font-bold leading-[0.95] mb-4 tracking-tight">
+  <span className="block text-white">Chelsea AI</span>
+  <span className="block bg-gradient-to-r from-sky-200 to-white bg-clip-text text-transparent">
+    Pageant Coach
+  </span>
+</h1>
 
       <p className="text-lg md:text-xl text-purple-50 opacity-90 mb-6 leading-relaxed max-w-xl">
         Train with an AI pageant coach designed to help you sharpen your Q&A,
@@ -313,7 +313,7 @@ const buildConversationHistory = (messageList) => {
 
     {/* Photo block */}
     <div className="mt-6 lg:mt-0 lg:flex-1">
-      <div className="relative w-full max-w-xs mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5]">
+      <div className="relative w-full max-w-xs mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/6]">
         <div className="absolute inset-0 bg-gradient-to-t from-purple-900 via-transparent to-transparent z-10"></div>
         <img
           src="/ChelseaFernandez.jpg"
@@ -409,7 +409,7 @@ const buildConversationHistory = (messageList) => {
           ))}
           {isLoading && (
             <div className="flex justify-start animate-pulse">
-              <div className="flex gap-3 max-w-[85%]">
+              <div className="flex gap-3 max-w-[75%]">
                 <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center">
                   <Sparkles size={16} />
                 </div>
@@ -483,10 +483,7 @@ const buildConversationHistory = (messageList) => {
   </form>
 
  <div className="mt-4 text-center">
-  <p className="text-[10px] uppercase tracking-[0.25em] text-slate-400 font-semibold">
-    Powered by Google Gemini
-  </p>
-  <p className="mt-2 text-[11px] text-slate-400/90 max-w-md mx-auto leading-relaxed">
+   <p className="mt-2 text-[11px] text-slate-400/90 max-w-md mx-auto leading-relaxed">
     Chelsea AI Pageant Coach is an independent AI concept inspired by Chelsea Fernandez and designed to support aspiring pageant contestants.
   </p>
 </div>
